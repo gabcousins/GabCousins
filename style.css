@@ -1,0 +1,176 @@
+body {
+  margin: 1;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  background: var(--primary-color)
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #fa3636;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-bottom: 30%;
+}
+
+.name h1 {
+  font-size: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 0%;
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.white-text {
+  color: var(--secondary-color)
+}
+
+.red-text {
+  color: #fa3636;
+}
+
+.contact-links {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 3rem;
+}
+
+.contact-links a i {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  padding-right: 3rem;
+}
+
+.contact-links a:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .name h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Add this CSS to your existing stylesheet or create a new one */
+
+.footer {
+  background-color: var(--primary-color);
+  padding: 20px 0;
+}
+
+.footer p {
+  font-size: 15px;
+  color: var(--secondary-color);
+  margin: 0;
+  text-align: center;
+}
+
+.footer p::before {
+  content: "\00a9 "; /* Insert copyright symbol */
+}
+
+.footer p span {
+  font-weight: bold;
+}
+
+.credits{
+  text-align: center;
+  padding-top: 0.7rem;
+}
+
+.gablink{
+  text-decoration: none;
+  color: #fa3636;
+  background-color: var(--primary-color)
+}
+.shat{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-decoration: underline;
+  font-size: 22px;
+  
+}
+
+.shatterdome-team {
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 4rem;
+}
+
+.team-list {
+  list-style: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+.team-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.shatter{
+  text-decoration: underline;
+}
+
+#myButton{
+  font-size: x-large;
+  background-color: tranparent;
+  border-color: var(--secondary-color);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #fa3636;
+}
+
+#myButton{
+  transition: transform 2ms; /* Animation */
+  margin: 0 auto;
+}
+
+#myButton:hover {
+  transform: scale(5.6); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#icon{
+   height: 2rem;
+   width: 2rem;
+   padding-left: 2rem;
+   padding-top: 2rem;
+   cursor: pointer;
+}
+
+:root{
+  --primary-color: linear-gradient(45deg, #444, #222);
+  --secondary-color: #fff
+}
+
+.light-theme{
+  --primary-color: /*#C8C8C8*/linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  --secondary-color: #000000;
+}
