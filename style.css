@@ -146,16 +146,10 @@ header {
   border-color: var(--secondary-color);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #fa3636;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-#myButton{
-  transition: transform 2ms; /* Animation */
-  margin: 0 auto;
-}
-
-#myButton:hover {
-  transform: scale(5.6); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
 
 #icon{
    height: 2rem;
