@@ -8,38 +8,58 @@
   <meta property="og:title" content="Gab Cousins">
   <meta name="description" content="A dumb boy🤯">
   <meta property="og:description" content="A dumb boy🤯">
-  <meta property="og:image" content="images/favicon3.png">
+  <meta property="m" content="https://img1.wsimg.com/isteam/ip/1e6e8d2a-b1f4-47c2-b2d0-3efefe66f2c7/blob.png">
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#3673FC">
-  <link href="https://gabcousins.github.io/GabCousins/" rel="canonical">
+  <link href="" rel="canonical">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/favicon3.png">
+
+</head>
+<body> 
+  <div id="particles-js"></div>
+  <canvas id="canvas" width="0" height="0"></canvas>
+  <nav>
+    <div class="ah">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"> <img src="images/sun.png" id="icon"></label>
+    <ul>
+      <li class="ahs"><a class="active ahs" href="#"  > <i class="fa-solid fa-house"></i>Home</a></li>
+      <li class="ahs"><a class="ahs" href="#p-name"><i class="fa-solid fa-address-card"></i>About</a></li>
+      <li class="ahs"><a class="ahs" href="#shatterdome-team"><i class="fa-solid fa-user-group"></i>Team</a></li>
+      <li class="ahs"><a class="ahs" href="#contact-links"><i class="fa-regular fa-id-badge"></i>Contact</a></li>
+    </ul>
+    </div>
+  </nav>
   <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
     new Crate({
       server: '1072250863499890779',
       channel: '1137772330882449499',
+      location: ['bottom', 'left']
     })
   </script>
-</head>
-<body>
-  <img src="images/sun.png" id="icon">
   <header>
     <div class="container">
+      <div class="cont">
       <div class="profile-pic">
         <img src="images/logo.jpg" alt="Your Profile Picture">
       </div>
+    </div>
       <div class="name">
-        <h1><span class="white-text">I'm</span> <span class="red-text">Gabcousins</span></h1>
-        <h3 class="p-name"> I am useless, just a dumb guy. No use from me, just do things for fun.</h3>
+        <h1><span class="white-text">I'm</span> <span class="red-text"></span></h1>
+        <h3 id="p-name"> I am useless, just a dumb guy. No use from me, just do things for fun.</h3> 
         <p class="shat">Talk To Me And My Small Team SHATTERDOME</p>
       </div>
 
-      <div class="shatterdome-team">
+      <div id="shatterdome-team">
         <h2 class="shatter">SHATTERDOME Team</h2>
-        <ul class="team-list">
+        <ol class="team-list">
           <li>SuZ</li>
           <li>The_GAMER</li>
           <li>Draco Ser</li>
@@ -47,20 +67,39 @@
           <li>MAK</li>
           <li>GᴀB CᴏᴜSɪɴS</li>
           <li>InFeRNo</li>
-        </ul>
+        </ol>
 
         <a id="myButton">Click Me</a>
 
       </div>
 
-      <div class="contact-links">
-        <a href="https://discord.com/users/747464391808778283" target="_blank" class="discord"><i class="fab fa-discord "></i></a>
-        <a href="https://www.instagram.com/gabcousins/" target="_blank" class="instagram"><i class="fab fa-instagram "></i></a>
+      <div id="contact-links">
+        <a href="https://discord.com/users/747464391808778283" target="_blank" id="discord"><i class="fab fa-discord "></i></a>
+        <a href="https://www.instagram.com/gabcousins/" target="_blank" id="instagram"><i class="fab fa-instagram "></i></a>
       </div>
     </div>
+
+    <link rel="stylesheet" href="https://badge.coolcodersj.repl.co/style.css">
+<a class="badge" href="https://repl.it/@USER" target="_blank" >
+<img src="images/favicon3.png" alt="replit" />MADE BY GAB</a>
   </header>
 
-  <script src="script.js"></script>
+
+  <script src="scripts.js"></script>
+  <script src="particles.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com\ajax\libs\jquery\3.4.1\jquery.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  
+  <script>
+    var typingEffect = new Typed(".red-text",{
+      strings : ["GABCOUSINS","DESIGNER","BAD-CODER"],
+      loop : true,
+      typeSpeed : 90,
+      backSpeed : 80,
+      backDelay : 1500
+    })
+  </script>
 </body>
 <footer class="footer">
   <div class="container">
@@ -78,5 +117,6 @@
   <a class="gablink" href="https://discord.com/users/747464391808778283" target="_blank"><b>𝙶𝙰𝙱</b></a>
 </div>
 
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center "><i class="fa-solid fa-arrow-up"></i></i></a>
 
 </html>
