@@ -4,17 +4,23 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.6;
   color: var(--secondary-color);
-  background: var(--primary-color)
+  background: var(--primary-color);
+  background-repeat: no-repeat;
+  
 }
 
 header {
   text-align: center;
-  padding: 2rem;
+  padding: 4rem;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.cont{
+  align-items: center;
 }
 
 .profile-pic {
@@ -44,33 +50,41 @@ header {
 
 
 .white-text {
-  color: var(--secondary-color)
+  color: var(--secondary-color);
+  font-weight: 500;
+  text-align: center;
 }
 
-.red-text {
-  color: #fa3636;
+.red-text{
+color: #fa3636;
+
 }
 
-.contact-links {
+#contact-links {
   display: inline-block;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
-.contact-links a {
+#contact-links a {
   display: inline-block;
   margin: 0 10px;
   transition: transform 0.3s ease-in-out;
   padding-left: 3rem;
+  cursor: pointer;
 }
 
-.contact-links a i {
+#contact-links a i {
   font-size: 2rem;
   color: var(--secondary-color);
   padding-right: 3rem;
+  cursor: pointer;
+  position: relative;
 }
-
-.contact-links a:hover {
+#contact-links a:hover {
   transform: scale(1.2);
+  cursor: pointer;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
@@ -109,7 +123,8 @@ header {
 .gablink{
   text-decoration: none;
   color: #fa3636;
-  background-color: var(--primary-color)
+  background-color: var(--primary-color);
+  position: relative;
 }
 .shat{
   padding-top: 5%;
@@ -119,7 +134,7 @@ header {
   
 }
 
-.shatterdome-team {
+#shatterdome-team {
   text-align: center;
   margin-top: 30px;
   padding-bottom: 4rem;
@@ -140,24 +155,25 @@ header {
   text-decoration: underline;
 }
 
-#myButton{
+#myButton {
   font-size: x-large;
-  background-color: tranparent;
-  border-color: var(--secondary-color);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #fa3636;
   text-decoration: underline;
   cursor: pointer;
+  color: #fa3636;
 }
 
-
-#icon{
-   height: 2rem;
-   width: 2rem;
-   padding-left: 2rem;
-   padding-top: 2rem;
-   cursor: pointer;
+#myButton{
+  transition: transform 2ms; /* Animation */
+  margin: 0 auto;
+  position: relative;
 }
+
+#myButton:hover {
+  transform: scale(5.6); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  position: relative;
+}
+
 
 :root{
   --primary-color: linear-gradient(45deg, #444, #222);
@@ -165,6 +181,257 @@ header {
 }
 
 .light-theme{
-  --primary-color: /*#C8C8C8*/linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  --primary-color: #C8C8C8;
   --secondary-color: #000000;
+}
+
+#instagram i:hover{
+  color: #bc2a8d;
+  position: relative;
+  }
+  
+  
+  #discord i:hover {
+    color: #3b5998;
+    }
+
+  .align-items-center {
+      align-items: center!important;
+      color: #fa3636;
+      text-decoration: none;
+      padding-top: 1rem;
+  }
+  .justify-content-center {
+      justify-content: center!important;
+      color: #fa3636;
+      position: relative;
+  }
+  .d-flex {
+      display: flex!important;
+      position: relative;
+      
+  }
+
+  
+
+  /*#fa3636       blue    #4682b4*/
+/*
+  .head{
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    padding-top: 3vh;
+    
+  }
+
+  .head #icon{
+    position: relative;
+    width: 2.3rem;
+    cursor: pointer;
+    padding-left: 3vh;
+  }
+
+  .head .navbar a {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-left: 2rem;
+    text-decoration: none;
+  }
+  .navbar {
+    padding-right: 9vh;
+  }
+
+  .head .navbar a:hover {
+    color: #fa3636;
+  }
+  .toggle-btn{
+    position: relative;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: none;
+  }
+
+  @media (max-width: 992px){
+    .head{
+      padding: 0 5%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn{
+      display: block;
+    }
+
+    .toggle-btn.active::before{
+      content: '\f00d';
+    }
+
+    .head .navbar {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: #454545;
+      padding: 0 5%;
+      transform: scaleY(0);
+      transition: 0.8s;
+      transform-origin: top;
+      overflow: hidden;
+    }
+    
+    .head .navbar.active {
+      transform: scaleY(1);
+    }
+    
+    .head .navbar a {
+      display: block;
+      margin: 1.5rem 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.5s, transform 0.5s;
+      transition-delay: calc(0.1s * var(--i));
+    }
+    
+    .head .navbar.active a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }  */
+  nav{
+    background-color: var(--primary-color);
+    height: 80px;
+    width: 100%;
+  }
+  label #icon{
+    position: relative;
+    width: 2.3rem;
+    cursor: pointer;
+    padding-left: 3vh;
+    padding-top: 2rem;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    position: relative;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: var(--secondary-color);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .active, .ah a:hover{
+    color: #fa3636;
+    transition: .5s;
+  }
+  .ahs{
+    text-decoration: none;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: var(--secondary-color);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: absolute;
+      width: 94.9%;
+      height: 85vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    .active, .ah a:hover{
+      color: #fa3636;
+      transition: .5s;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+.fa-house{
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.fa-address-card{
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.fa-user-group{
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.fa-id-badge{
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.fa-bars{
+  position: relative;
+}
+
+#canvas {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: auto;
+  padding: 0;
+  margin: 0;
+}
+canvas{
+  width: 0;
+  height: 0;
+}
+#particles-js{
+	width: 100%;
+	height: 100%;
+	background-repeat: repeat;
+  position: fixed;
 }
