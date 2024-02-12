@@ -435,3 +435,7 @@ canvas{
 	background-repeat: repeat;
   position: fixed;
 }
+.madegab{
+	height: 30px;
+    width: 100%;
+}
