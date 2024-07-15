@@ -10,10 +10,7 @@ icon.onclick = function() {
 }
 
 
-const a = document.getElementById('myButton');
-a.addEventListener('click', () => {
- alert('Click the bottom left discord button to chat with me and shatterdome');
-});
+
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");

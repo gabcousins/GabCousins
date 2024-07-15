@@ -4,7 +4,8 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.6;
   color: var(--secondary-color);
-  background: var(--primary-color);
+background: var(--primary-color);
+  background-size: 100%;
   background-repeat: no-repeat;
   
 }
@@ -302,93 +303,168 @@ color: #fa3636;
       transform: translateY(0);
     }
   }  */
-  nav{
-    background-color: var(--primary-color);
-    height: 80px;
-    width: 100%;
-  }
-  label #icon{
-    position: relative;
-    width: 2.3rem;
-    cursor: pointer;
-    padding-left: 3vh;
-    padding-top: 2rem;
-  }
-  nav ul{
-    float: right;
-    margin-right: 20px;
-  }
-  nav ul li{
-    position: relative;
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  nav ul li a{
-    color: var(--secondary-color);
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+ 
+nav{
+  display: flex;
+  height: 100px;
+
+  align-items: center;
+  justify-content: space-between;
+padding-top: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+label #icon{
+  position: relative;
+  width: 2.3rem;
+  cursor: pointer;
+  padding-left: 3vh;
+
+
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  cursor: pointer;
+}
+nav ul li{
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+  line-height: 10px;
+}
+nav ul li a{
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
   .active, .ah a:hover{
     color: #fa3636;
     transition: .5s;
   }
-  .ahs{
-    text-decoration: none;
+  .ahs a:hover{
+    color: #fa3636;
+    transition: .5s;
   }
-  .checkbtn{
-    font-size: 30px;
-    color: var(--secondary-color);
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
+nav .menu-btn i{
+  color: #fa3636;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+.ahs{
+  text-decoration: none;
+    justify-content: space-between;
     cursor: pointer;
-    display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
   }
-  #check{
-    display: none;
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
   }
-  @media (max-width: 952px){
-    label.logo{
-      font-size: 30px;
-      padding-left: 50px;
-    }
-    nav ul li a{
-      font-size: 16px;
-    }
+  label #icon{
+    width: 2rem;
   }
-  @media (max-width: 858px){
-    .checkbtn{
-      display: block;
-    }
-    ul{
-      position: absolute;
-      width: 94.9%;
-      height: 85vh;
-      background: #2c3e50;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-    }
-    nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    nav ul li a{
-      font-size: 20px;
-    }
-    .active, .ah a:hover{
-      color: #fa3636;
-      transition: .5s;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
   }
+  nav ul{
+    position: absolute;
+    top: 100px;
+    left: -115%;
+    background: #111;
+    height: 100vh;
+    width: 95%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+  }
+  #click:checked ~ ul li a{
+    margin-left: -0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: #fa3636;
+  }
+  .profile-pic {
+    width: 285px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #fa3636;
+    overflow: hidden;
+
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 30%;
+  }
+}
+
+
+#canvas {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: auto;
+  padding: 0;
+  margin: 0;
+}
+canvas{
+  width: 0;
+  height: 0;
+}
+#particles-js{
+	width: 100%;
+	height: 100%;
+	background-repeat: repeat;
+  position: fixed;
+}
+.madegab{
+    height: 50px;
+    width: 50px;
+}
+
 .fa-house{
   padding-right: 10px;
   cursor: pointer;
@@ -414,27 +490,131 @@ color: #fa3636;
   position: relative;
 }
 
-#canvas {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: auto;
-  padding: 0;
-  margin: 0;
+
+
+
+
+
+
+
+
+@media (max-width: 920px) {
+  .card{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
 }
-canvas{
-  width: 0;
-  height: 0;
+
+.main{
+
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ }
+ 
+ .card{
+      width: 20%;
+      display: inline-block;
+      box-shadow: 2px 2px 20px black;
+      border-radius: 10px; 
+      margin: 2%;
+      position: relative;
+
+     }
+ 
+ .image img{
+   width: 100%;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+   
+ 
+  
+  }
+ 
+ .title{
+  
+   text-align: center;
+   padding: 10px;
+   
+  }
+ 
+ h1{
+   font-size: 20px;
+  }
+ 
+ .des{
+   padding: 3px;
+   text-align: center;
+  
+   padding-top: 10px;
+         border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+ }
+ button{
+   margin-top: 40px;
+   margin-bottom: 10px;
+   background-color: white;
+   border: 1px solid black;
+   border-radius: 5px;
+   padding:10px;
+ }
+ button:hover{
+   background-color: black;
+   color: white;
+   transition: .5s;
+   cursor: pointer;
+ }
+ .image1{
+  width: 240px;
+  height: 160px;
+
+ }
+ .image2{
+  padding-top: 5px;
+ }
+ .ets2h1{
+  padding-top: 20px;
+ }
+.image3{
+  height: 160px;
 }
-#particles-js{
-	width: 100%;
-	height: 100%;
-	background-repeat: repeat;
-  position: fixed;
+
+.image4{
+  height: 160px;
+  padding-left: 50px;
 }
-.madegab{
-    height: 50px;
-    width: 50px;
+#games{
+  text-align: left;
+  color: var(--secondary-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+.card:hover{
+  background-color: rgb(62, 62, 62);
+  transition: .5s;
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.03);
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
 }
