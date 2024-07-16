@@ -1,25 +1,30 @@
+
 body {
-  margin: 1;
+  margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.6;
   color: var(--secondary-color);
-background: var(--primary-color);
+  background: var(--primary-color);
   background-size: 100%;
   background-repeat: no-repeat;
-  
+  overflow-x: hidden; 
 }
+
 
 header {
   text-align: center;
   padding: 4rem;
 }
 
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
-.cont{
+
+
+.cont {
   align-items: center;
 }
 
@@ -32,6 +37,7 @@ header {
   margin: 0 auto 2rem;
 }
 
+
 .profile-pic img {
   width: 100%;
   height: 100%;
@@ -39,14 +45,14 @@ header {
   padding-bottom: 30%;
 }
 
+
 .name h1 {
   font-size: 2.5rem;
   padding-top: 2.5rem;
-  padding-bottom: 0%;
+  padding-bottom: 0;
   position: relative;
   display: inline-block;
 }
-
 
 
 .white-text {
@@ -55,16 +61,18 @@ header {
   text-align: center;
 }
 
-.red-text{
-color: #fa3636;
 
+.red-text {
+  color: #fa3636;
 }
+
 
 #contact-links {
   display: inline-block;
   margin-bottom: 1rem;
   cursor: pointer;
 }
+
 
 #contact-links a {
   display: inline-block;
@@ -74,6 +82,7 @@ color: #fa3636;
   cursor: pointer;
 }
 
+
 #contact-links a i {
   font-size: 2rem;
   color: var(--secondary-color);
@@ -81,24 +90,37 @@ color: #fa3636;
   cursor: pointer;
   position: relative;
 }
+
+
 #contact-links a:hover {
   transform: scale(1.2);
-  cursor: pointer;
-  position: relative;
 }
 
+
 @media screen and (max-width: 600px) {
+
   .name h1 {
     font-size: 2rem;
   }
+
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .profile-pic img {
+    padding-bottom: 0;
+  }
 }
 
-/* Add this CSS to your existing stylesheet or create a new one */
 
 .footer {
   background-color: var(--primary-color);
   padding: 20px 0;
 }
+
 
 .footer p {
   font-size: 15px;
@@ -107,32 +129,38 @@ color: #fa3636;
   text-align: center;
 }
 
+
 .footer p::before {
-  content: "\00a9 "; /* Insert copyright symbol */
+  content: "\00a9 ";
 }
+
 
 .footer p span {
   font-weight: bold;
 }
 
-.credits{
+
+.credits {
   text-align: center;
   padding-top: 0.7rem;
 }
 
-.gablink{
+
+.gablink {
   text-decoration: none;
   color: #fa3636;
   background-color: var(--primary-color);
   position: relative;
 }
-.shat{
+
+
+.shat {
   padding-top: 5%;
   padding-bottom: 5%;
   text-decoration: underline;
   font-size: 22px;
-  
 }
+
 
 #shatterdome-team {
   text-align: center;
@@ -140,20 +168,25 @@ color: #fa3636;
   padding-bottom: 4rem;
 }
 
+
 .team-list {
   list-style: none;
   padding: 0;
   text-decoration: none;
 }
 
+
 .team-list li {
   font-size: 18px;
   margin-bottom: 10px;
   text-decoration: none;
 }
-.shatter{
+
+
+.shatter {
   text-decoration: underline;
 }
+
 
 #myButton {
   font-size: x-large;
@@ -161,183 +194,98 @@ color: #fa3636;
   text-decoration: underline;
   cursor: pointer;
   color: #fa3636;
-}
-
-#myButton{
-  transition: transform 2ms; /* Animation */
+  transition: transform 2ms; 
   margin: 0 auto;
   position: relative;
 }
 
+
 #myButton:hover {
-  transform: scale(5.6); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  position: relative;
+  transform: scale(1.2); 
 }
 
 
-:root{
+:root {
   --primary-color: linear-gradient(45deg, #444, #222);
-  --secondary-color: #fff
+  --secondary-color: #fff;
 }
 
-.light-theme{
+
+.light-theme {
   --primary-color: #C8C8C8;
   --secondary-color: #000000;
 }
 
-#instagram i:hover{
+
+#instagram i:hover {
   color: #bc2a8d;
+}
+
+
+#discord i:hover {
+  color: #3b5998;
+}
+
+
+.align-items-center {
+  align-items: center!important;
+  color: #fa3636;
+  text-decoration: none;
+  padding-top: 1rem;
+}
+
+
+.justify-content-center {
+  justify-content: center!important;
+  color: #fa3636;
   position: relative;
-  }
-  
-  
-  #discord i:hover {
-    color: #3b5998;
-    }
-
-  .align-items-center {
-      align-items: center!important;
-      color: #fa3636;
-      text-decoration: none;
-      padding-top: 1rem;
-  }
-  .justify-content-center {
-      justify-content: center!important;
-      color: #fa3636;
-      position: relative;
-  }
-  .d-flex {
-      display: flex!important;
-      position: relative;
-      
-  }
-
-  
-
-  /*#fa3636       blue    #4682b4*/
-/*
-  .head{
-    top: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2vh;
-    padding-top: 3vh;
-    
-  }
-
-  .head #icon{
-    position: relative;
-    width: 2.3rem;
-    cursor: pointer;
-    padding-left: 3vh;
-  }
-
-  .head .navbar a {
-    position: relative;
-    display: inline-block;
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    margin-left: 2rem;
-    text-decoration: none;
-  }
-  .navbar {
-    padding-right: 9vh;
-  }
-
-  .head .navbar a:hover {
-    color: #fa3636;
-  }
-  .toggle-btn{
-    position: relative;
-    font-size: 2rem;
-    color: var(--secondary-color);
-    cursor: pointer;
-    display: none;
-  }
-
-  @media (max-width: 992px){
-    .head{
-      padding: 0 5%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn{
-      display: block;
-    }
-
-    .toggle-btn.active::before{
-      content: '\f00d';
-    }
-
-    .head .navbar {
-      position: absolute;
-      left: 0;
-      top: 100%;
-      background-color: #454545;
-      padding: 0 5%;
-      transform: scaleY(0);
-      transition: 0.8s;
-      transform-origin: top;
-      overflow: hidden;
-    }
-    
-    .head .navbar.active {
-      transform: scaleY(1);
-    }
-    
-    .head .navbar a {
-      display: block;
-      margin: 1.5rem 0;
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 0.5s, transform 0.5s;
-      transition-delay: calc(0.1s * var(--i));
-    }
-    
-    .head .navbar.active a {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }  */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+}
 
 
- 
-nav{
+.d-flex {
+  display: flex!important;
+  position: relative;
+}
+
+
+nav {
   display: flex;
   height: 100px;
-
   align-items: center;
   justify-content: space-between;
-padding-top: 10px;
+  padding-top: 10px;
   flex-wrap: wrap;
   cursor: pointer;
 }
-label #icon{
+
+
+label #icon {
   position: relative;
   width: 2.3rem;
   cursor: pointer;
   padding-left: 3vh;
-
-
 }
-nav ul{
+
+
+nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
-nav ul li{
+
+
+nav ul li {
   margin: 0 5px;
   cursor: pointer;
   position: relative;
   line-height: 10px;
 }
-nav ul li a{
+
+
+nav ul li a {
   color: var(--secondary-color);
   text-decoration: none;
   font-size: 17px;
@@ -348,94 +296,91 @@ nav ul li a{
   transition: all 0.3s ease;
   cursor: pointer;
 }
-  .active, .ah a:hover{
-    color: #fa3636;
-    transition: .5s;
-  }
-  .ahs a:hover{
-    color: #fa3636;
-    transition: .5s;
-  }
-nav .menu-btn i{
+
+
+.active, .ah a:hover, .ahs a:hover {
+  color: #fa3636;
+  transition: 0.5s;
+}
+
+
+nav .menu-btn i {
   color: #fa3636;
   font-size: 22px;
   cursor: pointer;
   display: none;
 }
-.ahs{
+
+
+.ahs {
   text-decoration: none;
-    justify-content: space-between;
-    cursor: pointer;
-}
-input[type="checkbox"]{
-  display: none;
-}
-@media (max-width: 1000px){
-  nav{
-    padding: 0 40px 0 50px;
-  }
+  justify-content: space-between;
+  cursor: pointer;
 }
 
+
+input[type="checkbox"] {
+  display: none;
+}
+
+
 @media (max-width: 920px) {
-  nav .menu-btn i{
+  nav {
+    padding: 0 40px 0 50px;
+  }
+
+  nav .menu-btn i {
     display: block;
   }
-  label #icon{
+
+  label #icon {
     width: 2rem;
   }
-  #click:checked ~ .menu-btn i:before{
+
+  #click:checked ~ .menu-btn i:before {
     content: "\f00d";
   }
-  nav ul{
+
+  nav ul {
     position: absolute;
     top: 100px;
-    left: -115%;
+    left: -100%;
     background: #111;
-    height: 100vh;
-    width: 95%;
+    height: calc(100vh - 100px);
+    width: 100%;
     text-align: center;
     display: block;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
   }
-  #click:checked ~ ul{
+
+  #click:checked ~ ul {
     left: 0;
   }
-  nav ul li{
+
+  nav ul li {
     width: 100%;
     margin: 40px 0;
   }
-  nav ul li a{
+
+  nav ul li a {
     width: 100%;
-    margin-left: -100%;
     display: block;
     font-size: 20px;
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     cursor: pointer;
   }
-  #click:checked ~ ul li a{
-    margin-left: -0px;
+
+  #click:checked ~ ul li a {
+    margin-left: 0;
   }
+
   nav ul li a.active,
-  nav ul li a:hover{
+  nav ul li a:hover {
     background: none;
     color: #fa3636;
-  }
-  .profile-pic {
-    width: 285px;
-    height: 300px;
-    border-radius: 50%;
-    border: 5px solid #fa3636;
-    overflow: hidden;
-
-  }
-  
-  .profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding-bottom: 30%;
   }
 }
 
@@ -450,53 +395,32 @@ input[type="checkbox"]{
   padding: 0;
   margin: 0;
 }
-canvas{
+
+
+canvas {
   width: 0;
   height: 0;
 }
-#particles-js{
-	width: 100%;
-	height: 100%;
-	background-repeat: repeat;
+
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
   position: fixed;
 }
-.madegab{
-    height: 50px;
-    width: 50px;
+
+
+.madegab {
+  height: 50px;
+  width: 50px;
 }
 
-.fa-house{
+.fa-house, .fa-address-card, .fa-user-group, .fa-id-badge, .fa-bars {
   padding-right: 10px;
   cursor: pointer;
   position: relative;
 }
-.fa-address-card{
-  padding-right: 10px;
-  cursor: pointer;
-  position: relative;
-}
-
-.fa-user-group{
-  padding-right: 10px;
-  cursor: pointer;
-  position: relative;
-}
-.fa-id-badge{
-  padding-right: 10px;
-  cursor: pointer;
-  position: relative;
-}
-.fa-bars{
-  position: relative;
-}
-
-
-
-
-
-
-
-
 
 @media (max-width: 920px) {
   .card{
