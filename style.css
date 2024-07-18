@@ -494,6 +494,7 @@ canvas {
  .image1{
   width: 240px;
   height: 160px;
+  padding: 0 0 0 0 
 
  }
  .image2{
@@ -541,4 +542,17 @@ canvas {
   .card {
     width: 100%;
   }
+}
+
+.title{
+  color: var(--secondary-color);
+ text-decoration: none;
+}
+.zion{
+font-weight: 1000;
+font-style: italic , bold;
+background: linear-gradient(to top, red, rgb(214, 117, 117));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
